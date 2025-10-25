@@ -1,5 +1,5 @@
----------------------------------------------------------------------------- CUMULATIVE ANALYSIS------------------------------------------------------------------------------------------------------------------------------
---------------------------------------------------- CALCULATE THE TOTAL SALES FOR EACH MONTH AND RUNNING TOTAL OF SALES OVER TIME-------------------------------------------------------------------------------------- 
+------------------------------------------------------------- CUMULATIVE ANALYSIS-----------------------------------------------------------------------------------
+------------------------------------- CALCULATE THE TOTAL SALES FOR EACH MONTH AND RUNNING TOTAL OF SALES OVER TIME-----------------------------------------------
 
 select order_date,total_sales,sum(total_sales) over(order by order_date) from 
 (select date_format(order_date,"%Y")  as order_date,
